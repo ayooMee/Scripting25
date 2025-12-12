@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #252525;
+    --text-dark: #e0e0e0;
+    --text-muted: #888888;
+    --accent-blue: #00ff9d;
+    --border-color: #3a3a3a;
+}
+
+body {
+    background-color: var(--bg-primary);
+    font-family: 'Space Mono', monospace;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #000000;
+    height: 100vh;
+    padding: 2rem;
+    border-right: 2px solid var(--accent-blue);
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+}
+
+.sidebar-title {
+    color: var(--accent-blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-text {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+
+
+.action-buttons {
+    margin-top: 2rem;
+}
+
+.story-image {
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    padding: 2rem;
+}
+
+/* Input Grid */
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.input-card {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.input-label {
+    color: #03a9f4;
+    font-size: 0.7rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Form Controls */
+.form-control {
+    background-color: #1a1a1a !important;
+    border: 2px solid var(--border-color);
+    color: var(--accent-blue) !important;
+    border-radius: 2px;
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 15px rgba(0, 255, 157, 0.4);
+}
+
+/* Buttons */
+.retro-btn {
+    background: #1a1a1a;
+    color: var(--accent-blue);
+    border: 2px solid var(--accent-blue);
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.retro-btn:hover {
+    background: var(--accent-blue);
+    color: #000;
+}
+
+.retro-btn-reset {
+    border-color: #ff3366;
+    color: #ff3366;
+}
+
+.retro-btn-reset:hover {
+    background: #ff3366;
+    color: #fff;
+}
+
+/* Output Section */
+.output-section {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.output-title {
+    color: var(--accent-blue);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.story-display {
+    background-color: #0a0a0a;
+    padding: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-left: 4px solid var(--accent-blue);
+    min-height: 200px;
+    line-height: 1.8;
+}
+
+.story-text {
+    color: var(--text-dark);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.95rem;
+    line-height: 2;
+    white-space: pre-wrap;
+    margin: 0;
+}
+
+/* Form Check */
+.form-check-input:checked {
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
+}
+
+.form-check-input {
+    border-color: var(--border-color);
+}
+
+.form-check-label {
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.radio-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.radio-title {
+    color: var(--accent-blue);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+.radio-label input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"]:checked {
+    border-color: var(--accent-blue);
+}
+
+.radio-label input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--accent-blue);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
